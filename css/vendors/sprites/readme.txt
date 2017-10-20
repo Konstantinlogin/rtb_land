@@ -1,0 +1,1 @@
+Генератор спрайтов - https://spritegen.website-performance.org/
