@@ -1,0 +1,377 @@
+$menu-btn-size: 30px
+$menu-btn-height: 16px
+$menu-btn-width: 28px
+$menu-btn-line-size: 2px
+$menu-btn-line-color: white
+$menu-btn-line-radius: $menu-btn-line-size
+$menu-btn-to-translate: ($menu-btn-height - $menu-btn-line-size) / 2
+$menu-btn-bounce: cubic-bezier(.87,-.50,.19,1.50)
+
+.menu-btn 
+
+  &__icon 
+    position: absolute
+    width: $menu-btn-width
+    height: $menu-btn-height
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+  
+  &__line 
+    position: absolute
+    left: 0
+    background-color: $menu-btn-line-color
+    height: $menu-btn-line-size
+    width: 100%
+    border-radius: $menu-btn-line-radius
+    pointer-events: none
+    &_1 
+      top: 0
+    
+    &_2 
+      top: 0
+      bottom: 0
+      margin: auto
+    
+    &_3 
+      bottom: 0
+
+  
+  &_close1 &__line_1 
+    transition: transform .2s ease-in-out
+  
+  &_close1 &__line_2 
+    right: 0
+    transition: right .2s ease-in-out, opacity .35s ease-in-out,  transform 0s ease-in-out
+  
+  &_close1 &__line_3 
+    transition: transform .2s ease-in-out
+  
+  // Open
+  &_close1.is-open &__line_1 
+    transform: translate3d(0, $menu-btn-to-translate, 0) rotate(135deg)
+  
+  &_close1.is-open &__line_2 
+    opacity: 0
+    right: -$menu-btn-width*4
+    transform: translate3d(-$menu-btn-width, 0, 0)
+    transition: opacity .2s ease-in-out, transform .2s ease-in-out, right .0s ease-in-out .2s
+  
+  &_close1.is-open &__line_3 
+    transform: translate3d(0, -$menu-btn-to-translate, 0) rotate(-135deg)
+  
+  
+  &_close2 &__line_1 
+    transition: transform .3s ease-in-out, top .2s ease-in-out .3s
+  
+  &_close2 &__line_1:before 
+    content: ''
+    position: absolute
+    width: 100%
+    height: $menu-btn-line-size
+    background-color: $menu-btn-line-color
+    border-radius: $menu-btn-line-radius
+    transition: transform .1s ease-in-out .2s
+  
+  &_close2 &__line_2 
+    transition: opacity .0s ease-in-out .3s
+  
+  &_close2 &__line_3 
+    transition: opacity .0s ease-in-out .3s, bottom .2s ease-in-out .3s
+  
+  // Open
+  &_close2.is-open &__line_1 
+    top: $menu-btn-to-translate
+    transform: rotate(135deg)
+    transition: top .3s ease-in-out, transform .3s linear .3s
+  
+  &_close2.is-open &__line_1:before 
+    transform: rotate(90deg)
+    transition: transform .1s ease-in-out .3s
+  
+  &_close2.is-open &__line_2 
+    opacity: 0
+    transition: opacity .0s ease-in-out .3s
+  
+  &_close2.is-open &__line_3 
+    bottom: $menu-btn-to-translate
+    opacity: 0
+    transition: bottom .3s ease-in-out, opacity .0s ease-in-out .3s
+  
+
+  
+  &_close3 &__line_1 
+    transition: transform .2s ease-in-out .15s, top .2s ease-in-out .2s
+  
+  &_close3 &__line_1:before 
+    content: ''
+    position: absolute
+    width: 100%
+    height: $menu-btn-line-size
+    background-color: $menu-btn-line-color
+    border-radius: $menu-btn-line-radius
+    transition: transform .15s ease-in-out
+  
+  &_close3 &__line_2
+    transition: opacity .0s ease-in-out .35s
+  
+  &_close3 &__line_3 
+    transition: opacity .0s ease-in-out .25s
+  
+  // Open
+  &_close3.is-open &__line_1 
+    top: $menu-btn-to-translate*2
+    transform: translate3d(0,-$menu-btn-to-translate,0) rotate(-45deg)
+    transition: top .2s ease-in-out, transform .15s ease-in-out .2s
+  
+  &_close3.is-open &__line_1:before 
+    transform: rotate(-90deg)
+    transition: transform .15s ease-in-out .3s
+  
+  &_close3.is-open &__line_2
+    opacity: 0
+    transition: opacity .0s ease-in-out .1s
+  
+  &_close3.is-open &__line_3
+    opacity: 0
+    transition: opacity .0s ease-in-out .2s
+  
+  &_close4 &__line_1,
+  &_close4 &__line_3
+    transition: all .2s ease-in-out
+  
+  &_close4 &__line_2
+    transition: transform .2s ease-in-out
+  
+  &_close4 &__line_2:before 
+    content: ''
+    position: absolute
+    width: 100%
+    height: $menu-btn-line-size
+    background-color: $menu-btn-line-color
+    border-radius: $menu-btn-line-radius
+    transition: transform .2s ease-in-out
+  
+  // Open
+  &_close4.is-open &__line_1 
+    opacity: 0
+    transform: translate3d(-2*$menu-btn-to-translate,0,0)
+    transition: all .2s ease-in-out
+  
+  &_close4.is-open &__line_2
+    transform: rotate(45deg)
+    transition: transform .2s ease-in-out
+  
+  &_close4.is-open &__line_2:before 
+    transform: rotate(-90deg)
+    transition: transform .2s ease-in-out
+  
+  &_close4.is-open &__line_3
+    opacity: 0
+    transform: translate3d(2*$menu-btn-to-translate,0,0)
+    transition: all .2s ease-in-out
+  
+  &_close5 &__line_4,
+  &_close5 &__line_5 
+    opacity: 0
+    top: $menu-btn-to-translate
+    transition: opacity .2s ease-in-out, transform .2s ease-in-out
+    
+  &_close5 &__line_1 
+    transition: width .2s ease-in-out .4s
+  
+  &_close5 &__line_2 
+    transition: width .2s ease-in-out .3s
+  
+  &_close5 &__line_3 
+    transition: width .2s ease-in-out .2s
+  
+  &_close5 &__line_4  
+    transform: rotate(45deg) translate3d(-$menu-btn-width,0,0) 
+    transition: opacity .2s ease-in-out .2s, transform .2s ease-in-out .2s
+  
+  &_close5 &__line_5  
+    transform:  rotate(-45deg) translate3d($menu-btn-width,0,0) 
+    transition: opacity .2s ease-in-out, transform .2s ease-in-out
+  
+  // Open
+  &_close5.is-open &__line_1 
+    width: 0
+    transition: width .2s ease-in-out
+  
+  &_close5.is-open &__line_2 
+    width: 0
+    transition: width .2s ease-in-out .1s
+  
+  &_close5.is-open &__line_3
+    width: 0
+    transition: width .2s ease-in-out .2s
+  
+  &_close5.is-open &__line_4  
+    opacity: 1
+    transform: rotate(45deg) translate3d(0,0,0) 
+    transition: opacity .2s ease-in-out .2s, transform .2s ease-in-out .2s
+  
+  &_close5.is-open &__line_5  
+    opacity: 1
+    transform:  rotate(-45deg) translate3d(0,0,0) 
+    transition: opacity .2s ease-in-out .4s, transform .2s ease-in-out .4s
+  
+  
+  /*_- Close Button 6 _-*/
+  
+  &_close6 &__icon 
+    transition: transform 0s ease-in-out
+  
+  &_close6 &__line_1 
+    transition: transform .2s ease-in-out .3s, opacity 0s ease-in-out .4s
+  
+  &_close6 &__line_2
+    transition: transform .2s ease-in-out
+  
+  &_close6 &__line_2:before 
+    content: ''
+    position: absolute
+    width: 100%
+    height: $menu-btn-line-size
+    background-color: $menu-btn-line-color
+    border-radius: $menu-btn-line-radius
+    transition: transform .2s ease-in-out
+  
+  &_close6 &__line_3 
+    transition: transform .2s ease-in-out .3s, opacity 0s ease-in-out .4s
+  
+  // Open
+  &_close6.is-open &__icon 
+    transform: translate(-50%,-50%) rotate(90deg)
+    transition: transform .2s ease-in-out
+  
+  &_close6.is-open &__line_1 
+    opacity: 0
+    transform: translate3d(0,$menu-btn-to-translate,0)
+    transition: transform .2s ease-in-out .2s, opacity 0s ease-in-out .4s
+  
+  &_close6.is-open &__line_2
+    transform: rotate(45deg)
+    transition: transform .2s ease-in-out .5s
+  
+  &_close6.is-open &__line_2:before 
+    transform: rotate(-90deg)
+    transition: transform .2s ease-in-out .5s
+  
+  &_close6.is-open &__line_3
+    opacity: 0
+    transform: translate3d(0,-$menu-btn-to-translate,0)
+    transition: transform .2s ease-in-out .2s, opacity 0s ease-in-out .4s
+  
+  &_back1 &__line_1,
+  &_back1 &__line_3 
+    transition: transform .3s ease-in-out
+  
+  // Open
+  &_back1.is-open &__line_1 
+    transform: translate3d(-6.5px, 1px, 0) rotate(135deg) scaleX(.7)
+    transition: transform .3s ease-in-out
+  
+  &_back1.is-open &__line_3 
+    transform: translate3d(-6.5px, -1px, 0) rotate(-135deg) scaleX(.7)
+    transition: transform .3s ease-in-out
+  
+  &_back2 &__line_1,
+  &_back2 &__line_3 
+    transition: transform .3s ease-in-out
+  
+  // Open
+  &_back2.is-open &__line_1 
+    transform: translate3d(-6.5px, 1px, 0) rotate(-225deg) scaleX(.7)
+    transition: transform .3s ease-in-out
+  
+  &_back2.is-open &__line_3 
+    transform: translate3d(-6.5px, -1px, 0) rotate(225deg) scaleX(.7)
+    transition: transform .3s ease-in-out
+  
+  &_back3 &__line_1 
+    transition: transform .2s ease-in-out .2s
+  
+  &_back3 &__line_2 
+    transition: transform .2s ease-in-out .1s
+  
+  &_back3 &__line_3 
+    transition: transform .2s ease-in-out
+  
+  // Open
+  &_back3.is-open &__line_1 
+    transform: translate3d(-6.5px, 1px, 0) rotate(135deg) scaleX(.7)
+    transition: transform .2s ease-in-out
+  
+  &_back3.is-open &__line_2 
+    transform: rotate(180deg)
+    transition: transform .2s ease-in-out .1s
+  
+  &_back3.is-open &__line_3 
+    transform: translate3d(-6.5px, -1px, 0) rotate(225deg) scaleX(.7)
+    transition: transform .2s ease-in-out .2s
+
+  
+  &_back4 &__line_1 
+    transition: transform .3s ease-in-out
+  
+  &_back4 &__line_2 
+    transition: transform .3s ease-in-out
+  
+  &_back4 &__line_3 
+    transition: transform .3s ease-in-out
+  
+  // Open
+  &_back4.is-open &__line_1 
+    transform: translate3d(-6.5px, 16px, 0) rotate(-135deg) scaleX(.7)
+    transition: transform .3s ease-in-out
+  
+  &_back4.is-open &__line_2 
+    transform: rotate(-180deg)
+    transition: transform .3s ease-in-out
+  
+  &_back4.is-open &__line_3 
+    transform: translate3d(-6.5px, -16px, 0) rotate(-225deg) scaleX(.7)
+    transition: transform .3s ease-in-out
+
+  
+  &_back5 &__icon 
+    transition: transform .3s ease-in-out
+  
+  &_back5 &__line_1,
+  &_back5 &__line_3 
+    transition: transform .3s ease-in-out
+  
+  // Open
+  &_back5.is-open &__icon 
+    transform: rotate(180deg) translate(50%, 50%)
+    transition: transform .3s ease-in-out
+  
+  &_back5.is-open &__line_1 
+    transform: translate3d(6.5px, 1px, 0) rotate(45deg) scaleX(.7)
+    transition: transform .3s ease-in-out
+  
+  &_back5.is-open &__line_3 
+    transform: translate3d(6.5px, -1px, 0) rotate(-45deg) scaleX(.7)
+    transition: transform .3s ease-in-out
+  
+
+  
+  &_back6 &__line_1 
+    transition: transform .3s ease-in-out, top .2s ease-in-out .3s
+  
+  &_back6 &__line_3 
+    transition: transform .3s ease-in-out, bottom .2s ease-in-out .3s
+  
+  // Open
+  &_back6.is-open &__line_1 
+    top: $menu-btn-to-translate
+    transform: translate3d(-6.5px, -7.5px, 0) rotate(-45deg) scaleX(.7)
+    transition: top .2s ease-in-out, transform .3s ease-in-out .2s
+  
+  &_back6.is-open &__line_3 
+    bottom: $menu-btn-to-translate
+    transform: translate3d(-6.5px, 8px, 0) rotate(45deg) scaleX(.7)
+    transition: bottom .2s ease-in-out, transform .3s ease-in-out .2s
+  

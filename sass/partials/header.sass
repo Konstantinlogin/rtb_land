@@ -1,0 +1,176 @@
+//header
+
+.header
+    position: absolute
+    top: 20px
+    left: 0
+    width: 100%
+    display: flex
+    display: -ms-flex
+    display: -webkit-flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+    height: 80px
+    width: calc(100% - 40px)
+    padding-left: 20px
+    padding-right: 20px
+    color: white
+    font-size: 1.1rem
+    transition: .5s
+    z-index: 2
+
+    &.is-font-smaller
+        font-size: 99%
+        transition: .1s
+    
+    &.is-scrolled
+        position: fixed
+        top: 0
+        transition: .5s
+        background-color: rgba(0,0,0,.4)
+
+    
+    &__left
+        display: flex
+        display: -ms-flex
+        display: -webkit-flex
+        align-items: center
+
+    &__menu-btn
+        position: relative
+        left: 8px
+
+    &__auth-sprite
+        display: none
+
+    &__social
+        display: none
+
+
+
+    &__container
+        @extend %container
+        position: relative
+        width: 100%
+        max-width: 1300px
+        display: flex
+        display: -ms-flex
+        display: -webkit-flex
+        align-items: center
+        justify-content: space-between
+    &__logo
+        position: relative
+        top: 4px
+        margin-right: 45px
+    &__right
+        font-size: .9em
+
+
++media($medium)
+  .header
+    top: 2px
+    font-size: .9rem
+    &.is-scrolled
+        font-size: 80%
+    &__logo
+        background-image: url('../img/icons/logo-rtb.png')
+        background-size: 100%
+        background-position: center
+        width: 120px
+        margin-right: 20px
+
+
++media($small)
+  .header
+    top: 0
+    width: calc(100% - 20px)
+    padding-left: 10px
+    padding-right: 10px
+    font-size: 100%
+    &.is-scrolled
+        font-size: 100%
+    
+
+    &__logo
+        margin-right: 0
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+
+    &__auth
+      width: auto
+      position: relative
+      bottom: 5px
+
+    &__auth-sprite
+        display: block
+
+    &__nav-menu
+        position: absolute
+        width: 100%
+        top: 60px
+        left: 0
+        font-weight: 200
+        font-size: .9rem
+        margin: 0
+
+    &__nav-item
+        display: block
+        margin: 0
+    &__nav-link
+        display: block
+        padding-left: 20px
+        padding-top: 16.5px
+        padding-bottom: 16.5px
+        &.is-active
+            background-color: #474e5c
+            font-weight: 200
+
+
+    &__nav
+      margin-left: 0
+      position: fixed
+      z-index: 3
+      display: block
+      width: calc(100% - 95px)
+      height: 100vh
+      top: 0
+      left: 0
+      background-color: #585e6a
+      transition-property: -webkit-transform
+      transition-property: transform
+      transition-property: transform, -webkit-transform
+      transition-duration: 0.3s
+      transition-delay: 0.3s
+      -webkit-transform: translate3d(-100%, 0, 0)
+      transform: translate3d(-100%, 0, 0)
+
+
+      &.is-active
+        -webkit-transform: translate3d(0, 0, 0)
+        transform: translate3d(0, 0, 0)
+        transition-delay: 0s
+
+    &__reg-link
+        display: none
+    &__auth-link
+        position: relative
+        right: 10px
+        bottom: 5px
+        font-size: 0
+        border: none
+        padding: 0
+
+
+    &__social
+        position: absolute
+        bottom: 92px
+        left: 18px
+        display: flex
+        display: -ms-flex
+        display: -webkit-flex
+        &-item
+            margin-right: 40px
+

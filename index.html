@@ -6,27 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Title</title>
-    <link rel="stylesheet" href="css/vendors/sprites/stylesheet.css">
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 
-<body style="height: 2000px">
+<body >
+
+    <!--<img src="Главная_320.jpg" style="position: fixed; opacity: 0.2; top: 0; left: 0" fidalt="">-->
 
     <header class="header js-scrolled-header">
         <div class="header__container">
-            <nav class="header__nav nav">
+            <div class="header__left">
+                <div class="menu-btn menu-btn_left menu-btn_close1 header__menu-btn">
+                    <div class="menu-btn__icon">
+                        <div class="menu-btn__line menu-btn__line_1"></div>
+                        <div class="menu-btn__line menu-btn__line_2"></div>
+                        <div class="menu-btn__line menu-btn__line_3"></div>
+                    </div>
+                </div>
                 <i class="header__logo spr spr-logo-rtb"></i>
+                <nav class="header__nav nav js-toggle-menu">
+                    <ul class="nav__menu header__nav-menu">
+                        <li class="nav__item header__nav-item"><a href="#" class="nav__link header__nav-link is-active">Преимущества</a></li>
+                        <li class="nav__item header__nav-item"><a href="#" class="nav__link header__nav-link">Технологии</a></li>
+                        <li class="nav__item header__nav-item"><a href="#" class="nav__link header__nav-link ">Рекламные форматы</a></li>
+                    </ul>
+                    <ul class="nav__menu header__social">
+                        <li class="nav__item header__social-item"><a target="_blank" href="https://vk.com/sapeofficial" class="spr spr-fb"></a></li>
+                        <li class="nav__item header__social-item"><a target="_blank" href="#" class="spr spr-tw"></a></li>
+                        <li class="nav__item header__social-item"><a target="_blank" href="#" class="spr spr-ins"></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__right nav">
                 <ul class="nav__menu">
-                    <li class="nav__item"><a href="#" class="nav__link">Преимущества</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Технологии</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Рекламные форматы</a></li>
-                </ul>
-            </nav>
-            <div class="header__auth-block nav">
-                <ul class="nav__menu">
-                    <li class="nav__item"><a href="#" class="nav__link">Регистрация</a></li>
-                    <li class="nav__item"><a href="#" class="nav__button">Вход</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link header__reg-link">Регистрация</a></li>
+                    <li class="nav__item"><a href="#" class="nav__button header__auth-link">Вход <i class="header__auth-sprite spr spr-auth"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -35,16 +49,14 @@
     <section class="head">
         <div class="head__container">
             <h1 class="head__title">
-                RtbSape - монетизация сайтов с моментальным выводом дохода
+                RtbSape -професиональный инструмент монетизации сайтов
             </h1>
             <p class="head__text">Профессиональная платформа rtb-рекламы. Значительно увеличивает доход вебмастера за счет доступа к премиальным
                 рекламодателям России и стран СНГ, максимизации стоимости рекламных показов и выкупа 100% трафика.</p>
         </div>
     </section>
 
-
-
-    <div  id="slider_steps" class="slider-steps">
+    <div style="display: none" id="slider_steps" class="slider-steps">
         <div class="slider-steps__wrapper">
             <div class="slider-steps__slide">
 
@@ -86,28 +98,13 @@
         </div>
     </div>
 
-
-
-
-
-    
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="js/plugins/swiper.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/nav.js"></script>
     <script async src="js/slider_steps.js"></script>
 
-    <!-- Initialize Swiper -->
-
-    <script>
-
-
-
-    </script>
-
-
-<!--    
-    Sprites:    
+<!--
+<i class="spr spr-auth"></i>
 <i class="spr spr-arrow-cta"></i>
 <i class="spr spr-arrow-left"></i>
 <i class="spr spr-arrow-right"></i>
