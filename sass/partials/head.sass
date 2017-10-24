@@ -16,7 +16,7 @@
         @extend %container
         max-width: 986px
         position: relative
-        top: calc(50% - 40px)
+        top: 50%
         transform: translateY(-50%)
     &__title
         @extend %title
@@ -27,25 +27,66 @@
         padding-top: 10px
         padding-bottom: 10px
 
+    &__form
+        position: relative
+        top: 20px
+        font-size: 0
+    &__submit
+        position: relative
+        margin: 12px
+        @extend %button
+        font-size: 1rem
+        
+    &__input
+        position: relative
+        margin: 12px
+        @extend %input
+        font-size: 1rem
+
+        width: 320px
+
 
 +media($medium)
     .head
-        height: calc(100vh - 330px)
+        height: auto
+        min-height: 700px
         &__container
-            top: 230px
+            top: 270px
         &__title
             font-size: 2.5rem
 
 
 +media($small)
     .head
-        height: calc(100vh - 330px)
+        min-height: 660px
         &__container
-            top: calc(50% - 12px)
+            top: 0
+            transform: none
+            padding-top: 90px
 
         &__title
             font-size: 1.47rem
+            padding: 0
         &__text
             font-size: 1rem
+            padding: 0
+            padding-top: 10px
+
+        &__form
+            top: 0
+            display: block
+            width: 100%
+            max-width: 680px
+            margin: 0 auto
+        &__input
+            display: block
+            padding: 15px
+            width: calc(100% - 30px)
+            margin: 15px auto
+        &__submit
+            display: block
+            width: calc(100% + 3px)
+            padding: 15px
+            margin: 15px auto
 
 

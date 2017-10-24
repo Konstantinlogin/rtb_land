@@ -13,9 +13,37 @@
 @import partials/nav
 @import partials/menu-btn
 
-@import partials/head
+
 @import partials/header
+@import partials/head
+@import partials/why-rtb
+
+
 @import partials/slider-steps
+
+.text-block
+    max-width: 980px
+    margin: 0 auto
+    text-align: center
+
+    &__title
+        @extend %title
+        margin-top: 10px
+        margin-bottom: 10px
+
+    &__text
+        @extend %text
+        font-size: 1.4rem
+
++media($medium)
+    .text-block
+        &__title
+            font-size: 2.5rem
+
+
+
++media($small)
+
 
         
 

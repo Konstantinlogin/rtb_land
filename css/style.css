@@ -169,12 +169,12 @@ td,
 th {
   padding: 0; }
 
-.head__title {
+.head__title, .text-block__title {
   font-weight: 200;
   font-size: 3rem;
   margin: 0; }
 
-.head__text {
+.head__text, .text-block__text {
   font-weight: 200;
   font-size: 1.3rem;
   line-height: 1.5;
@@ -185,8 +185,25 @@ th {
   padding-left: 10px;
   padding-right: 10px; }
 
-.head__container, .header__container {
+.header__container, .head__container {
   margin: auto; }
+
+.head__submit {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  border: 2px solid #e63946;
+  background-color: #e63946;
+  padding: 19px; }
+
+.head__input {
+  display: inline-block;
+  outline: none;
+  color: #3d3c3d;
+  border-radius: 6px;
+  border: 2px solid #e1e8ee;
+  padding: 19px; }
 
 @font-face {
   font-family: 'Roboto', sans-serif;
@@ -1627,46 +1644,6 @@ button.swiper-pagination-bullet {
   .menu-btn {
     display: block; } }
 
-.head {
-  height: calc(100vh - 160px);
-  min-height: 600px;
-  text-align: center;
-  color: white;
-  background-image: url("https://static.sape.ru/rtb/img/promo_main/bg-head.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; }
-  .head__container {
-    max-width: 986px;
-    position: relative;
-    top: calc(50% - 40px);
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%); }
-  .head__title {
-    padding-bottom: 10px; }
-  .head__text {
-    padding-top: 10px;
-    padding-bottom: 10px; }
-
-@media screen and (max-width: 1060px) {
-  .head {
-    height: calc(100vh - 330px); }
-    .head__container {
-      top: 230px; }
-    .head__title {
-      font-size: 2.5rem; } }
-
-@media screen and (max-width: 767px) {
-  .head {
-    height: calc(100vh - 330px); }
-    .head__container {
-      top: calc(50% - 12px); }
-    .head__title {
-      font-size: 1.47rem; }
-    .head__text {
-      font-size: 1rem; } }
-
 .header {
   position: absolute;
   top: 20px;
@@ -1855,3 +1832,176 @@ button.swiper-pagination-bullet {
       display: -webkit-flex; }
       .header__social-item {
         margin-right: 40px; } }
+
+.head {
+  height: calc(100vh - 160px);
+  min-height: 600px;
+  text-align: center;
+  color: white;
+  background-image: url("https://static.sape.ru/rtb/img/promo_main/bg-head.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  .head__container {
+    max-width: 986px;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
+  .head__title {
+    padding-bottom: 10px; }
+  .head__text {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+  .head__form {
+    position: relative;
+    top: 20px;
+    font-size: 0; }
+  .head__submit {
+    position: relative;
+    margin: 12px;
+    font-size: 1rem; }
+  .head__input {
+    position: relative;
+    margin: 12px;
+    font-size: 1rem;
+    width: 320px; }
+
+@media screen and (max-width: 1060px) {
+  .head {
+    height: auto;
+    min-height: 700px; }
+    .head__container {
+      top: 270px; }
+    .head__title {
+      font-size: 2.5rem; } }
+
+@media screen and (max-width: 767px) {
+  .head {
+    min-height: 660px; }
+    .head__container {
+      top: 0;
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none;
+      padding-top: 90px; }
+    .head__title {
+      font-size: 1.47rem;
+      padding: 0; }
+    .head__text {
+      font-size: 1rem;
+      padding: 0;
+      padding-top: 10px; }
+    .head__form {
+      top: 0;
+      display: block;
+      width: 100%;
+      max-width: 680px;
+      margin: 0 auto; }
+    .head__input {
+      display: block;
+      padding: 15px;
+      width: calc(100% - 30px);
+      margin: 15px auto; }
+    .head__submit {
+      display: block;
+      width: calc(100% + 3px);
+      padding: 15px;
+      margin: 15px auto; } }
+
+.why-rtb {
+  position: relative;
+  top: -90px;
+  margin-bottom: -90px;
+  color: white; }
+  .why-rtb__container {
+    padding-top: 90px;
+    width: 100%;
+    max-width: 1440px;
+    min-height: 525px;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-image: url("https://static.sape.ru/rtb/img/promo_main/why-rtb-mcbook.png");
+    background-size: 1440px;
+    background-position: center top; }
+  .why-rtb__content {
+    margin-top: -90px;
+    padding-top: 110px;
+    position: relative; }
+  .why-rtb__title {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 300; }
+  .why-rtb__text {
+    display: block;
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+    padding: 0;
+    opacity: 0.8;
+    font-weight: 300;
+    font-size: .9rem;
+    line-height: 25px; }
+
+@media screen and (max-width: 1060px) {
+  .why-rtb {
+    top: -147px; }
+    .why-rtb__container {
+      background-size: 1070px;
+      min-height: 330px; }
+    .why-rtb__content {
+      position: static;
+      padding-top: 40px; }
+    .why-rtb__title {
+      font-size: 1.5rem;
+      margin-top: 0;
+      top: -60px; } }
+
+@media screen and (max-width: 767px) {
+  .why-rtb {
+    margin-top: 0; }
+    .why-rtb__content {
+      padding-top: 70px; }
+    .why-rtb__container {
+      background-color: #008fdb;
+      background-image: url("https://static.sape.ru/rtb/img/promo_main/macbook-content.jpg");
+      background-size: 767px;
+      background-position: left 18px;
+      min-height: 300px; }
+    .why-rtb__title, .why-rtb__text {
+      top: 0;
+      margin: 0 auto;
+      width: calc(100% - 40px);
+      max-width: 100%;
+      padding-left: 20px;
+      padding-right: 20px; }
+    .why-rtb__title {
+      top: 30px;
+      font-size: 1.2rem; }
+    .why-rtb__text {
+      line-height: 1.5;
+      font-size: .8rem;
+      padding-bottom: 5px; } }
+
+@media screen and (max-width: 420px) {
+  .why-rtb__container {
+    background-size: 470px;
+    background-position: -30px 148px; } }
+
+.text-block {
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center; }
+  .text-block__title {
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  .text-block__text {
+    font-size: 1.4rem; }
+
+@media screen and (max-width: 1060px) {
+  .text-block__title {
+    font-size: 2.5rem; } }
