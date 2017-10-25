@@ -1743,6 +1743,7 @@ button.swiper-pagination-bullet {
 
 @media screen and (max-width: 767px) {
   .header {
+    position: fixed;
     top: 0;
     width: calc(100% - 20px);
     padding-left: 10px;
