@@ -7,7 +7,7 @@
     min-height: 600px
     text-align: center
     color: white
-    background-image: url($static-path + "/img/promo_main/bg-head.jpg")
+    background-image: url($bg-main)
     background-repeat: no-repeat
     background-size: cover
     background-position: center
@@ -58,11 +58,12 @@
 
 +media($small)
     .head
-        min-height: 660px
+        min-height: 0
         &__container
             top: 0
             transform: none
             padding-top: 90px
+            padding-bottom: 15px
 
         &__title
             font-size: 1.47rem

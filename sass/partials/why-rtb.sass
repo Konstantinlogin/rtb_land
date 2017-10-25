@@ -9,7 +9,7 @@
     padding-top: 90px
     width: 100%
     max-width: 1440px
-    min-height: 525px
+    min-height: 472px
     margin: auto
     background-repeat: no-repeat
     background-image: url($static-path + "/img/promo_main/why-rtb-mcbook.png")
@@ -43,6 +43,7 @@
 +media($medium)
   .why-rtb
     top: -147px
+    margin-bottom: -147px
     &__container
       background-size: 1070px
       min-height: 330px
@@ -60,8 +61,9 @@
 
 +media($small)
   .why-rtb
+    top: 0
 
-    margin-top: 0
+    margin: 0 auto
     &__content
       padding-top: 70px
     &__container

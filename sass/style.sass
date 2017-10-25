@@ -2,6 +2,7 @@
 @import partials/variables
 @import partials/mixins
 @import partials/base
+@import partials/b64
 
 @import partials/fonts
 @import partials/layout
@@ -17,37 +18,48 @@
 @import partials/header
 @import partials/head
 @import partials/why-rtb
+@import partials/agencies
+@import partials/text-block
+@import partials/trafic-circle
 
 
 @import partials/slider-steps
 
-.text-block
-    max-width: 980px
-    margin: 0 auto
-    text-align: center
 
-    &__title
-        @extend %title
-        margin-top: 10px
-        margin-bottom: 10px
 
-    &__text
-        @extend %text
-        font-size: 1.4rem
+
+
+.funnel
+    position: relative
+    height: 470px
+    &__trapeze
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 470px
+        background-image: url($trapezoid_lg)
+        background-repeat: no-repeat
+        background-size: 100%
 
 +media($medium)
-    .text-block
-        &__title
-            font-size: 2.5rem
-        &__text
+.funnel
+    height: 631px
+
+
+    &__trapeze
+        height: 631px
+
+        background-image: url($trapezoid_md)
 
 
 
 +media($small)
+    .funnel
+        height: 631px
 
+        &__trapeze
+            height: 631px
 
-        
-
-
-
-    
+            background-image: url($trapezoid_sm)
+      
