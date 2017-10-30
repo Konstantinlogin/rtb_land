@@ -1,0 +1,113 @@
+.funnel
+    position: relative
+    background-image: url($trapezoid_lg)
+    background-repeat: no-repeat
+    background-size: 100%
+    color: white
+
+    &__section
+        position: relative
+        width: 100%
+        text-align: center
+        top: 20px
+        
+        &--first
+            height: 182px
+            line-height: 38px      
+    
+
+        &--second
+            height: 153px
+            line-height: 30px
+
+        &--third
+            height: 136px
+            line-height: 22px
+
+
+    &__content
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translate(-50%, 0)
+            
+ 
+
+    &__text
+        display: inline-block
+        width: 100%
+        white-space: nowrap
+        &--top
+            text-transform: uppercase
+
+        &--center
+            font-size: 2rem
+            font-weight: 300
+        &--bottom
+
+
+    &__separator
+        display: block
+        width: 80px
+        margin: 10px auto
+        height: 2px
+        background-color: rgba(255, 255, 255, 0.5)
+
+    
+
++media($medium)
+    .funnel
+        background-image: url($trapezoid_md)
+        background-size: 576px
+        background-position: center 
+        width: 100%
+        max-width: 576px
+        margin: auto
+        &__text
+            &--center
+                font-size: 1.6rem
+            &--bottom
+                font-size: .9rem
+
+
+        &__section
+         
+            &--first
+                height: 213px
+                line-height: 27px
+
+            &--second
+                height: 213px
+  
+            &--third
+                height: 206px
+                line-height: 25px
+      
+
+
++media(610px)
+    .funnel
+        width: 100%
+        max-width: 320px
+        margin: auto
+        background-image: url($trapezoid_sm)
+        background-size: 320px
+        font-size: 90%
+        &__section
+            &--first
+      
+                line-height: 25px
+            &--second
+       
+                line-height: 25px
+            &--third
+    
+                line-height: 23px
+        &__text
+            &--center
+                font-size: 1.5rem
+            &--bottom
+                font-size: 90%
+
+        &__separator
+            width: 40px
