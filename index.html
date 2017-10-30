@@ -88,14 +88,16 @@
                 <p class="text-block__text">Продажа рекламного инвентаря с наибольшей выгодой для каждого вебмастера.</p>
             </div>
         </div>
-        <div class="agencies__left">
+
+        <div class="agencies__column-wrapper">
+            <div class="agencies__left">
             <div class="agencies__trafic-info trafic-circle">
                 <div class="trafic-circle__content">
                     <span class="trafic-circle__num">100%</span>
                     <span class="trafic-circle__text">трафика</span>
                 </div>
             </div>
-            <div class="funnel">
+            <div id="funnel" class="funnel">
                 <div class="funnel__section funnel__section--first">
                     <div class="funnel__content">
                         <span class="funnel__text funnel__text--top">Максимальный CPM</span>
@@ -103,6 +105,7 @@
                         <span class="funnel__text funnel__text--center">Премиальный выкуп</span>
                         <span class="funnel__text funnel__text--bottom">Рекламные агентства и топовые партнеры</span>
                     </div>
+                    <div data-logos-section="1" class="funnel__slider logos"></div>
                 </div>
                 <div class="funnel__section funnel__section--second">
                     <div class="funnel__content">
@@ -110,6 +113,9 @@
                         <div class="funnel__separator"></div>
                         <span class="funnel__text funnel__text--center">Крупнейшие RTB-сети</span>
                         <span class="funnel__text funnel__text--bottom">Протокол OpenRTB</span>
+                    </div>
+                    <div class="funnel__slider">
+                        <div data-logos-section="2" class="funnel__slider-wrapper"></div>    
                     </div>
                 </div>
                 <div class="funnel__section funnel__section--third">
@@ -119,10 +125,39 @@
                         <span class="funnel__text funnel__text--center">Рекламные сети</span>
                         <span class="funnel__text funnel__text--bottom">с широким охватом</span>
                     </div>
+                    <div data-logos-section="3" class="funnel__slider">
+       
+                    </div>
+   
                 </div>
             </div>
         </div>
-        <div class="agencies__right">2</div>
+        <div class="agencies__right">
+            <div id="logos" class="logos">
+                <div data-logos-section="1" class="logos__section">
+                    <a href="#" class="logos__item"><i class="spr spr-logo-ym"></i></a>
+                    <a href="#" class="logos__item"><i class="spr spr-logo-adriver"></i></a>
+                    <a href="" class="logos__item"><i class="spr spr-logo-target-mail"></i></a>
+                    <a href="" class="logos__item"><i class="spr spr-logo-otm"></i></a>
+                    <a href="" class="logos__item"><i class="spr spr-logo-criteo"></i></a>
+                </div>
+                <div data-logos-section="2" class="logos__section">
+                    <a href="#" class="logos__item"><i class="spr spr-logo-rt"></i></a> 
+                    <a href="#" class="logos__item"><i class="spr spr-logo-targetix"></i></a> 
+                    <a href="#" class="logos__item"><i class="spr spr-logo-mixmarket"></i></a> 
+                    <a href="#" class="logos__item"><i class="spr spr-logo-begun"></i></a> 
+                    <a href="#" class="logos__item"><i class="spr spr-logo-union-traff"></i></a> 
+                    <a href="#" class="logos__item"><i class="spr spr-logo-republer"></i></a> 
+                    <a href="#" class="logos__item"><i class="spr spr-logo-between"></i></a> 
+                </div>
+                <div data-logos-section="3" class="logos__section">
+                    <a href="#" class="logos__item"><i class="spr spr-logo-margetgid"></i></a> 
+                    <a href="#" class="logos__item"><i class="spr spr-logo-ad-tags"></i></a> 
+                    <a href="#" class="logos__item"><i class="spr spr-logo-direct-advert"></i></a> 
+                </div>
+            </div>
+        </div>
+        </div>
 
     </section>
 
@@ -165,8 +200,16 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    <script>
+        var viewport = {
+            small: '767',
+            medium: '1060'
+        }
+    </script>
     <script src="js/plugins/swiper.js"></script>
     <script src="js/nav.js"></script>
+    <script src="js/main.js"></script>
     <script async src="js/slider_steps.js"></script>
 
     <!--

@@ -2009,21 +2009,39 @@ button.swiper-pagination-bullet {
   flex-wrap: wrap;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
+  .agencies__column-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
   .agencies__head {
     width: 100%; }
   .agencies__left {
     width: 558px; }
   .agencies__right {
-    width: calc(100% - 558px); }
+    width: calc(100% - 588px);
+    padding-top: 250px;
+    padding-left: 30px; }
   .agencies__trafic-info {
     margin: 50px auto; }
 
 @media screen and (max-width: 1060px) {
   .agencies {
-    padding-top: 40px; }
+    padding-top: 40px;
+    position: relative; }
+    .agencies__column-wrapper {
+      position: relative;
+      width: 100%; }
     .agencies__left, .agencies__right {
       width: 100%;
-      min-width: 0; } }
+      min-width: 0; }
+    .agencies__right {
+      display: none; } }
 
 @media screen and (max-width: 767px) {
   .agencies {
@@ -2116,6 +2134,17 @@ button.swiper-pagination-bullet {
     margin: 10px auto;
     height: 2px;
     background-color: rgba(255, 255, 255, 0.5); }
+  .funnel__slider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: none; }
+    .funnel__slider .logos {
+      width: 100%; }
+      .funnel__slider .logos__section {
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap; }
 
 @media screen and (max-width: 1060px) {
   .funnel {
@@ -2158,3 +2187,28 @@ button.swiper-pagination-bullet {
       font-size: 90%; }
     .funnel__separator {
       width: 40px; } }
+
+.logos__section {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 60px; }
+
+.logos__item {
+  display: inline-block;
+  margin-right: 30px;
+  margin-bottom: 25px; }
+
+@media screen and (max-width: 1060px) {
+  .logos__section {
+    margin-bottom: 0;
+    background-color: white;
+    position: relative; } }

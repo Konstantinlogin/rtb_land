@@ -24,3 +24,26 @@
 @import partials/funnel
 
 @import partials/slider-steps
+
+.logos
+    &__section
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        margin-bottom: 60px
+
+    &__item
+
+        display: inline-block
+        margin-right: 30px
+        margin-bottom: 25px
+
++media($medium)
+    .logos
+        &__section
+            margin-bottom: 0
+            background-color: white
+            position: relative
+
++media(610px)
+
