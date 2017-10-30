@@ -28,38 +28,103 @@
 
 
 
-
 .funnel
     position: relative
-    height: 470px
-    &__trapeze
+    // height: 470px
+    background-image: url($trapezoid_lg)
+    background-repeat: no-repeat
+    background-size: 100%
+    color: white
+
+    &__section
+        position: relative
+        display: inline-block
+        width: 100%
+        text-align: center
+        &--first
+            height: 182px
+            top: 30px
+            line-height: 1.5
+
+
+        &--second
+            height: 153px
+            top: 30px
+            line-height: 1.3
+  
+
+        &--third
+            height: 136px
+            top: 10px
+            line-height: 1.3
+
+    &__content
         position: absolute
         top: 0
-        left: 0
+        left: 50%
+        transform: translate(-50%, 0)
+        height: 100%
+
+ 
+            
+ 
+
+    &__text
+        display: inline-block
         width: 100%
-        height: 470px
-        background-image: url($trapezoid_lg)
-        background-repeat: no-repeat
-        background-size: 100%
+        white-space: nowrap
+        // margin-top: 10px
+        &--top
+            text-transform: uppercase
+
+        &--center
+            font-size: 2rem
+            font-weight: 300
+        &--bottom
+        //    margin-top: 15px
+
+    &__separator
+        display: block
+        width: 80px
+        margin: 10px auto
+        height: 2px
+        background-color: rgba(255, 255, 255, 0.5)
+
+    
 
 +media($medium)
-.funnel
-    height: 631px
-
-
-    &__trapeze
-        height: 631px
-
-        background-image: url($trapezoid_md)
-
-
-
-+media($small)
     .funnel
-        height: 631px
+        background-image: url($trapezoid_md)
+        background-size: 576px
+        background-position: center 
+        width: 100%
+        max-width: 576px
+        margin: auto
+        &__text
+            font-size: 95%
+            &--center
+                font-size: 1.5rem
+        &__section
+            &--first
+                height: 213px
+                top: 30px
+                // padding-top: 25px
+                // line-height: 1.4
+            &--second
+                height: 213px
+                top: 30px
+                // line-height: 1.1
+            &--third
+                height: 206px
+                top: 20px
+                // line-height: .9
 
-        &__trapeze
-            height: 631px
 
-            background-image: url($trapezoid_sm)
++media(610px)
+    .funnel
+        width: 100%
+        max-width: 320px
+        margin: auto
+        background-image: url($trapezoid_sm)
+        background-size: 320px
       

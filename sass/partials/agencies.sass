@@ -6,13 +6,15 @@
     margin: 0 auto
     display: flex
     flex-wrap: wrap
+    box-sizing: border-box
     &__head
         width: 100%
     &__left
-        width: 50%
+        width: 558px
+
 
     &__right
-        width: 50%
+        width: calc(100% - 558px)
     &__trafic-info
         margin: 50px auto
 
@@ -21,7 +23,15 @@
 +media($medium)
     .agencies
         padding-top: 40px
+        &__left, &__right
+            width: 100%
+            min-width: 0
 
 
 
 +media($small)
+    .agencies
+        padding: 0
+        width: 100%
+        &__trafic-info
+            margin: 10px auto
