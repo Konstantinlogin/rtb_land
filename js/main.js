@@ -9,7 +9,8 @@ $(document).ready(function(){
     var sliderLogos = new Swiper('.funnel__slider', {
       slidesPerView: 4,
       spaceBetween: 30,
-      centeredSlides: true,
+      freeMode: true,
+      loop: true,
       wrapperClass: 'funnel__slider-wrapper',
       slideClass: 'logos__item'
     });
